@@ -1,0 +1,1 @@
+To use it just open the index.html file. Use your choice of text editor to edit it if you want.
