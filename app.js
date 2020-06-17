@@ -105,108 +105,106 @@ function runAI() {
 
     if((moves === 1 && cellElements[0].classList.contains('x')) || (moves === 1 && cellElements[2].classList.contains('x')) || (moves === 1 && cellElements[6].classList.contains('x')) || (moves === 1 && cellElements[8].classList.contains('x'))) {
       cellElements[4].click()
+      // Now it checks if it has any spots it can win with
+    } else if(cellElements[0].classList.contains('circle') && cellElements[1].classList.contains('circle') && cellElements[2].classList.contains('x') === false) {
+      cellElements[2].click()
+    } else if(cellElements[0].classList.contains('circle') && cellElements[2].classList.contains('circle') && cellElements[1].classList.contains('x') === false) {
+    cellElements[1].click()
+    } else if(cellElements[1].classList.contains('circle') && cellElements[2].classList.contains('circle') && cellElements[0].classList.contains('x') === false) {
+    cellElements[0].click()
+    } else if(cellElements[3].classList.contains('circle') && cellElements[4].classList.contains('circle') && cellElements[5].classList.contains('x') === false) {
+    cellElements[5].click()
+    } else if(cellElements[3].classList.contains('circle') && cellElements[5].classList.contains('circle') && cellElements[4].classList.contains('x') === false) {
+    cellElements[1].click()
+    } else if(cellElements[4].classList.contains('circle') && cellElements[5].classList.contains('circle') && cellElements[3].classList.contains('x') === false) {
+    cellElements[3].click()
+    } else if(cellElements[6].classList.contains('circle') && cellElements[7].classList.contains('circle') && cellElements[8].classList.contains('x') === false) {
+    cellElements[8].click()
+    } else if(cellElements[6].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[7].classList.contains('x') === false) {
+    cellElements[7].click()
+    } else if(cellElements[7].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[6].classList.contains('x') === false) {
+    cellElements[6].click()
+    } else if(cellElements[0].classList.contains('circle') && cellElements[3].classList.contains('xcircle') && cellElements[6].classList.contains('x') === false) {
+    cellElements[6].click()
+    } else if(cellElements[0].classList.contains('circle') && cellElements[6].classList.contains('circle') && cellElements[3].classList.contains('x') === false) {
+    cellElements[3].click()
+    } else if(cellElements[3].classList.contains('circle') && cellElements[6].classList.contains('circle') && cellElements[0].classList.contains('x') === false) {
+    cellElements[0].click()
+    } else if(cellElements[1].classList.contains('circle') && cellElements[4].classList.contains('circle') && cellElements[7].classList.contains('x') === false) {
+    cellElements[7].click()
+    } else if(cellElements[1].classList.contains('circle') && cellElements[7].classList.contains('circle') && cellElements[4].classList.contains('x') === false) {
+    cellElements[4].click()
+    } else if(cellElements[4].classList.contains('circle') && cellElements[7].classList.contains('circle') && cellElements[1].classList.contains('x') === false) {
+    cellElements[1].click()
+    } else if(cellElements[2].classList.contains('circle') && cellElements[5].classList.contains('circle') && cellElements[8].classList.contains('x') === false) {
+    cellElements[8].click()
+    } else if(cellElements[2].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[5].classList.contains('x') === false) {
+    cellElements[5].click()
+    } else if(cellElements[5].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[2].classList.contains('x') === false) {
+    cellElements[2].click()
+    } else if(cellElements[0].classList.contains('circle') && cellElements[4].classList.contains('circle') && cellElements[8].classList.contains('x') === false) {
+    cellElements[8].click()
+    } else if(cellElements[0].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[4].classList.contains('x') === false) {
+    cellElements[4].click()
+    } else if(cellElements[4].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[0].classList.contains('x') === false) {
+    cellElements[0].click()
+    } else if(cellElements[2].classList.contains('circle') && cellElements[4].classList.contains('circle') && cellElements[1].classList.contains('x') === false) {
+    cellElements[6].click()
+    } else if(cellElements[2].classList.contains('circle') && cellElements[6].classList.contains('circle') && cellElements[4].classList.contains('x') === false) {
+    cellElements[4].click()
+    } else if(cellElements[4].classList.contains('circle') && cellElements[6].classList.contains('circle') && cellElements[2].classList.contains('x') === false) {
+    cellElements[2].click()
+    // Now it starts checking if the enemy can win and tries to block it
+    } else if(cellElements[0].classList.contains('x') && cellElements[1].classList.contains('x') && cellElements[2].classList.contains('circle') === false) {
+    cellElements[2].click()
+    } else if(cellElements[0].classList.contains('x') && cellElements[2].classList.contains('x') && cellElements[1].classList.contains('circle') === false) {
+    cellElements[1].click()
+    } else if(cellElements[1].classList.contains('x') && cellElements[2].classList.contains('x') && cellElements[0].classList.contains('circle') === false) {
+    cellElements[0].click()
+    } else if(cellElements[3].classList.contains('x') && cellElements[4].classList.contains('x') && cellElements[5].classList.contains('circle') === false) {
+    cellElements[5].click()
+    } else if(cellElements[3].classList.contains('x') && cellElements[5].classList.contains('x') && cellElements[4].classList.contains('circle') === false) {
+    cellElements[4].click()
+    } else if(cellElements[4].classList.contains('x') && cellElements[5].classList.contains('x') && cellElements[3].classList.contains('circle') === false) {
+    cellElements[3].click()
+    } else if(cellElements[6].classList.contains('x') && cellElements[7].classList.contains('x') && cellElements[8].classList.contains('circle') === false) {
+    cellElements[8].click()
+    } else if(cellElements[6].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[7].classList.contains('circle') === false) {
+    cellElements[7].click()
+    } else if(cellElements[7].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[6].classList.contains('circle') === false) {
+    cellElements[6].click()
+    } else if(cellElements[0].classList.contains('x') && cellElements[3].classList.contains('x') && cellElements[6].classList.contains('circle') === false) {
+    cellElements[6].click()
+    } else if(cellElements[0].classList.contains('x') && cellElements[6].classList.contains('x') && cellElements[3].classList.contains('circle') === false) {
+    cellElements[3].click()
+    } else if(cellElements[3].classList.contains('x') && cellElements[6].classList.contains('x') && cellElements[0].classList.contains('circle') === false) {
+    cellElements[0].click()
+    } else if(cellElements[1].classList.contains('x') && cellElements[4].classList.contains('x') && cellElements[7].classList.contains('circle') === false) {
+    cellElements[7].click()
+    } else if(cellElements[1].classList.contains('x') && cellElements[7].classList.contains('x') && cellElements[4].classList.contains('circle') === false) {
+    cellElements[4].click()
+    } else if(cellElements[4].classList.contains('x') && cellElements[7].classList.contains('x') && cellElements[1].classList.contains('circle') === false) {
+    cellElements[1].click()
+    } else if(cellElements[2].classList.contains('x') && cellElements[5].classList.contains('x') && cellElements[8].classList.contains('circle') === false) {
+    cellElements[8].click()
+    } else if(cellElements[2].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[5].classList.contains('circle') === false) {
+    cellElements[5].click()
+    } else if(cellElements[5].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[2].classList.contains('circle') === false) {
+    cellElements[2].click()
+    } else if(cellElements[0].classList.contains('x') && cellElements[4].classList.contains('x') && cellElements[8].classList.contains('circle') === false) {
+    cellElements[8].click()
+    } else if(cellElements[0].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[4].classList.contains('circle') === false) {
+    cellElements[4].click()
+    } else if(cellElements[4].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[0].classList.contains('circle') === false) {
+    cellElements[0].click()
+    } else if(cellElements[2].classList.contains('x') && cellElements[4].classList.contains('x') && cellElements[1].classList.contains('circle') === false) {
+    cellElements[6].click()
+    } else if(cellElements[2].classList.contains('x') && cellElements[6].classList.contains('x') && cellElements[4].classList.contains('circle') === false) {
+    cellElements[4].click()
+    } else if(cellElements[4].classList.contains('x') && cellElements[6].classList.contains('x') && cellElements[2].classList.contains('circle') === false) {
+    cellElements[2].click()
     } else {
-      if(cellElements[0].classList.contains('circle') && cellElements[1].classList.contains('circle') && cellElements[2].classList.contains('x') === false) {
-        cellElements[2].click()
-      } else if(cellElements[0].classList.contains('circle') && cellElements[2].classList.contains('circle') && cellElements[1].classList.contains('x') === false) {
-        cellElements[1].click()
-       } else if(cellElements[1].classList.contains('circle') && cellElements[2].classList.contains('circle') && cellElements[0].classList.contains('x') === false) {
-        cellElements[0].click()
-       } else if(cellElements[3].classList.contains('circle') && cellElements[4].classList.contains('circle') && cellElements[5].classList.contains('x') === false) {
-        cellElements[5].click()
-       } else if(cellElements[3].classList.contains('circle') && cellElements[5].classList.contains('circle') && cellElements[4].classList.contains('x') === false) {
-        cellElements[1].click()
-       } else if(cellElements[4].classList.contains('circle') && cellElements[5].classList.contains('circle') && cellElements[3].classList.contains('x') === false) {
-        cellElements[3].click()
-       } else if(cellElements[6].classList.contains('circle') && cellElements[7].classList.contains('circle') && cellElements[8].classList.contains('x') === false) {
-        cellElements[8].click()
-       } else if(cellElements[6].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[7].classList.contains('x') === false) {
-        cellElements[7].click()
-       } else if(cellElements[7].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[6].classList.contains('x') === false) {
-        cellElements[6].click()
-       } else if(cellElements[0].classList.contains('circle') && cellElements[3].classList.contains('xcircle') && cellElements[6].classList.contains('x') === false) {
-        cellElements[6].click()
-       } else if(cellElements[0].classList.contains('circle') && cellElements[6].classList.contains('circle') && cellElements[3].classList.contains('x') === false) {
-        cellElements[3].click()
-       } else if(cellElements[3].classList.contains('circle') && cellElements[6].classList.contains('circle') && cellElements[0].classList.contains('x') === false) {
-        cellElements[0].click()
-       } else if(cellElements[1].classList.contains('circle') && cellElements[4].classList.contains('circle') && cellElements[7].classList.contains('x') === false) {
-        cellElements[7].click()
-       } else if(cellElements[1].classList.contains('circle') && cellElements[7].classList.contains('circle') && cellElements[4].classList.contains('x') === false) {
-        cellElements[4].click()
-       } else if(cellElements[4].classList.contains('circle') && cellElements[7].classList.contains('circle') && cellElements[1].classList.contains('x') === false) {
-        cellElements[1].click()
-       } else if(cellElements[2].classList.contains('circle') && cellElements[5].classList.contains('circle') && cellElements[8].classList.contains('x') === false) {
-        cellElements[8].click()
-       } else if(cellElements[2].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[5].classList.contains('x') === false) {
-        cellElements[5].click()
-       } else if(cellElements[5].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[2].classList.contains('x') === false) {
-        cellElements[2].click()
-       } else if(cellElements[0].classList.contains('circle') && cellElements[4].classList.contains('circle') && cellElements[8].classList.contains('x') === false) {
-        cellElements[8].click()
-       } else if(cellElements[0].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[4].classList.contains('x') === false) {
-        cellElements[4].click()
-       } else if(cellElements[4].classList.contains('circle') && cellElements[8].classList.contains('circle') && cellElements[0].classList.contains('x') === false) {
-        cellElements[0].click()
-       } else if(cellElements[2].classList.contains('circle') && cellElements[4].classList.contains('circle') && cellElements[1].classList.contains('x') === false) {
-        cellElements[6].click()
-       } else if(cellElements[2].classList.contains('circle') && cellElements[6].classList.contains('circle') && cellElements[4].classList.contains('x') === false) {
-        cellElements[4].click()
-       } else if(cellElements[4].classList.contains('circle') && cellElements[6].classList.contains('circle') && cellElements[2].classList.contains('x') === false) {
-        cellElements[2].click()
-       } else {
-        if(cellElements[0].classList.contains('x') && cellElements[1].classList.contains('x') && cellElements[2].classList.contains('circle') === false) {
-          cellElements[2].click()
-        } else if(cellElements[0].classList.contains('x') && cellElements[2].classList.contains('x') && cellElements[1].classList.contains('circle') === false) {
-          cellElements[1].click()
-         } else if(cellElements[1].classList.contains('x') && cellElements[2].classList.contains('x') && cellElements[0].classList.contains('circle') === false) {
-          cellElements[0].click()
-         } else if(cellElements[3].classList.contains('x') && cellElements[4].classList.contains('x') && cellElements[5].classList.contains('circle') === false) {
-          cellElements[5].click()
-         } else if(cellElements[3].classList.contains('x') && cellElements[5].classList.contains('x') && cellElements[4].classList.contains('circle') === false) {
-          cellElements[1].click()
-         } else if(cellElements[4].classList.contains('x') && cellElements[5].classList.contains('x') && cellElements[3].classList.contains('circle') === false) {
-          cellElements[3].click()
-         } else if(cellElements[6].classList.contains('x') && cellElements[7].classList.contains('x') && cellElements[8].classList.contains('circle') === false) {
-          cellElements[8].click()
-         } else if(cellElements[6].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[7].classList.contains('circle') === false) {
-          cellElements[7].click()
-         } else if(cellElements[7].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[6].classList.contains('circle') === false) {
-          cellElements[6].click()
-         } else if(cellElements[0].classList.contains('x') && cellElements[3].classList.contains('x') && cellElements[6].classList.contains('circle') === false) {
-          cellElements[6].click()
-         } else if(cellElements[0].classList.contains('x') && cellElements[6].classList.contains('x') && cellElements[3].classList.contains('circle') === false) {
-          cellElements[3].click()
-         } else if(cellElements[3].classList.contains('x') && cellElements[6].classList.contains('x') && cellElements[0].classList.contains('circle') === false) {
-          cellElements[0].click()
-         } else if(cellElements[1].classList.contains('x') && cellElements[4].classList.contains('x') && cellElements[7].classList.contains('circle') === false) {
-          cellElements[7].click()
-         } else if(cellElements[1].classList.contains('x') && cellElements[7].classList.contains('x') && cellElements[4].classList.contains('circle') === false) {
-          cellElements[4].click()
-         } else if(cellElements[4].classList.contains('x') && cellElements[7].classList.contains('x') && cellElements[1].classList.contains('circle') === false) {
-          cellElements[1].click()
-         } else if(cellElements[2].classList.contains('x') && cellElements[5].classList.contains('x') && cellElements[8].classList.contains('circle') === false) {
-          cellElements[8].click()
-         } else if(cellElements[2].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[5].classList.contains('circle') === false) {
-          cellElements[5].click()
-         } else if(cellElements[5].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[2].classList.contains('circle') === false) {
-          cellElements[2].click()
-         } else if(cellElements[0].classList.contains('x') && cellElements[4].classList.contains('x') && cellElements[8].classList.contains('circle') === false) {
-          cellElements[8].click()
-         } else if(cellElements[0].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[4].classList.contains('circle') === false) {
-          cellElements[4].click()
-         } else if(cellElements[4].classList.contains('x') && cellElements[8].classList.contains('x') && cellElements[0].classList.contains('circle') === false) {
-          cellElements[0].click()
-         } else if(cellElements[2].classList.contains('x') && cellElements[4].classList.contains('x') && cellElements[1].classList.contains('circle') === false) {
-          cellElements[6].click()
-         } else if(cellElements[2].classList.contains('x') && cellElements[6].classList.contains('x') && cellElements[4].classList.contains('circle') === false) {
-          cellElements[4].click()
-         } else if(cellElements[4].classList.contains('x') && cellElements[6].classList.contains('x') && cellElements[2].classList.contains('circle') === false) {
-          cellElements[2].click()
-         } else {
-          cellElements[availableMoves[Math.floor(Math.random()*availableMoves.length)]].click()
-         }
-      }
+    cellElements[availableMoves[Math.floor(Math.random()*availableMoves.length)]].click()
+    }
     }
   }
-}
